@@ -1,3 +1,42 @@
+import math
+
+# Function to handle button clicks and update display
+def button_click(char):
+  global display
+  # Clear display when 'C' is pressed
+  if char == 'C':
+    display = ""
+  # Append character to display
+  else:
+    display += char
+  # Update the display widget (replace this with your GUI implementation)
+  print(display)
+
+# Function to evaluate the expression in the display
+def evaluate():
+  try:
+    result = str(eval(display))
+    display = result
+    print(result)
+  except:
+    print("Error")
+
+# Sample display variable (replace with your GUI element)
+display = ""
+
+# Example usage (replace with button functionality)
+while True:
+  user_input = input("Enter a character: ")
+  if user_input in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '*', '/', '.']:
+    button_click(user_input)
+  elif user_input == '=':
+    evaluate()
+  elif user_input == 'C':
+    button_click(user_input)
+  else:
+    print("Invalid Input")
+
+
 well come to the second repository in my github acount.
 there is simple way to represent it  as well as funny.
 i am going to modify the written text in local repository.
